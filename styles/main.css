@@ -1,0 +1,17 @@
+body{
+    background-color: #8c52ff;
+    color: #ffde59;
+}
+#startGame:hover{
+    color: rgb(255, 255, 255);
+}
+.startTitles{
+    justify-content: center;
+    align-items: center;
+    animation-name: intro;
+    animation-duration: 7s;
+}
+@keyframes intro {
+    0%   {opacity: 0%;}
+    100% {opacity: 100%;}
+  }

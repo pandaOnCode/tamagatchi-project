@@ -12,11 +12,16 @@ const doge = {
         doge.hodlValue--;
         doge.redditValue--;
         doge.tweetValue--;
+        $(".dollar").text(`Dollar Value: ${doge.dollarValue}`);
+        $(".hodl").text(`Hodl Power: ${doge.hodlValue}`);
+        $(".reddit").text(`Reddit Participation: ${doge.redditValue}`);
+        $(".tweet").text(`Musk Tweets: ${doge.tweetValue}`);
+        $(".diamond").text(`Diamond Hands: ${doge.hodlValue}`);
 
-        console.log("Dollar Value " + doge.dollarValue);
-        console.log("Hodl Value " + doge.hodlValue);
-        console.log("Reddit Value " + doge.redditValue);
-        console.log("Tweet Value " + doge.tweetValue);
+        // console.log("Dollar Value " + doge.dollarValue);
+        // console.log("Hodl Value " + doge.hodlValue);
+        // console.log("Reddit Value " + doge.redditValue);
+        // console.log("Tweet Value " + doge.tweetValue);
         if (doge.dollarValue === 0 || doge.hodlValue === 0 || doge.redditValue === 0 || doge.tweetValue === 0) {
             $("#game").hide()
             console.log("game over");
@@ -34,61 +39,71 @@ const doge = {
     dollarValueIncrease: function (event) {
         doge.dollarValue++
         console.log("Dollar Value " + doge.dollarValue);
+        $(".dollar").text(`Dollar Value: ${doge.dollarValue}`);
     },
     hodlValueIncrease: function (event) {
         doge.hodlValue++;
         console.log("Hodle Value " + doge.hodlValue);
+        $(".hodl").text(`Hodl Value: ${doge.hodlValue}`);
+
     },
     redditValueIncrease: function (event) {
         doge.redditValue++
         console.log("Reddit Value " + doge.redditValue);
+        $(".reddit").text(`Reddit Participation: ${doge.redditValue}`);
     },
     tweetValueIncrease: function (event) {
         doge.tweetValue++
         console.log("Musk Tweet Value " + doge.tweetValue);
+        $(".tweet").text(`Musk Tweets: ${doge.tweetValue}`);
     },
     diamondValueIncrease: function (event) {
         doge.diamondValue++
         console.log("Diamond Hands Value " + doge.diamondValue);
+        $(".diamond").text(`Diamond Hands: ${doge.hodlValue}`);
     },
     newLevel: function () {
         console.log("level 2 reached");
-        doge.hodlValue = 10;
+        doge.hodlValue = 25;
         doge.dollarValue = 25;
         $('#game').append('<button class="hodlSave">Hodl</button>');
         $("#dogepic").attr("src", "styles/images/level2Dog.png");
         $(".hodlSave").on("click", doge.hodlValueIncrease);
+        $("#stats").append('<li class="hodl"></li>');
     },
     newLevel3: function () {
         console.log("level 3 reached");
-        doge.hodlValue = 30;
-        doge.dollarValue = 30;
-        doge.redditValue = 30;
+        doge.hodlValue = 20;
+        doge.dollarValue = 20;
+        doge.redditValue = 20;
         $('#game').append('<button class="redditSave">Reddit</button>');
         $("#dogepic").attr("src", "styles/images/level3Dog.png");
         $(".redditSave").on("click", doge.redditValueIncrease);
+        $("#stats").append('<li class="reddit"></li>');
     },
     newLevel4: function () {
         console.log("level 4 reached");
-        doge.hodlValue = 32;
-        doge.dollarValue = 32;
-        doge.redditValue = 32;
-        doge.tweetValue = 32;
+        doge.hodlValue = 17;
+        doge.dollarValue = 17;
+        doge.redditValue = 17;
+        doge.tweetValue = 17;
         $('#game').append('<button class="tweetSave">Musk Tweet</button>');
         $("#dogepic").attr("src", "styles/images/level4Dog.png");
         $(".tweetSave").on("click", doge.tweetValueIncrease);
+        $("#stats").append('<li class="tweet"></li>');
     },
 
     newLevel5: function () {
         console.log("level 4 reached");
-        doge.hodlValue = 35;
-        doge.dollarValue = 35;
-        doge.redditValue = 35;
-        doge.tweetValue = 35;
-        doge.diamondValue = 35;
+        doge.hodlValue = 15;
+        doge.dollarValue = 15;
+        doge.redditValue = 15;
+        doge.tweetValue = 15;
+        doge.diamondValue = 15;
         $('#game').append('<button class="diamondSave">Diamond Hands</button>');
         $("#dogepic").attr("src", "styles/images/level5Dog.png");
         $(".diamondSave").on("click", doge.diamondValueIncrease);
+        $("#stats").append('<li class="diamond"></li>');
     },
     increaseTimer: function () {
         doge.timer++;
@@ -114,7 +129,6 @@ const doge = {
         }
 
     }
-
 
 }
 $("#gameover").hide()

@@ -1,30 +1,60 @@
-// $(".startTitles").hide()
 const doge = {
+    timer: 0,
     level: 1,
     dollarvalue: 10,
     alive: true,
-    crashTimer: 30,
+
+    newLevel: function () {
+        console.log("new level");
+    },
     crash: function () {
-        doge.crashTimer--
-        console.log("crash timer" + doge.crashTimer);
+        doge.dollarvalue--
+        console.log("Dollar Value " + doge.dollarvalue);
+        if (doge.dollarvalue === 0) {
+            $("#game").hide()
+            console.log("Dollar value reach 0, game over");
+            doge.alive = false;
+            return $('#gameover').show();
+        }
+
     },
     dogerun: function () {
-        setInterval(doge.crash, 2000);
+        setInterval(doge.crash, 250);
+
     },
     save: function (event) {
-        doge.crashTimer++
-        console.log(doge.crashTimer);
+        doge.dollarvalue++
+        console.log("Dollar Value " + doge.dollarvalue);
+    },
+    increaseTimer: function () {
+        doge.timer++;
+        console.log(doge.timer);
+        if (doge.alive === true && doge.timer === 10) {
+            doge.newLevel;
+        }
     }
 
     //update timer
     //update level
-
-
 }
+$("#gameover").hide()
+$("#game").hide();
+
+const startGame = function () {
+    console.log("clicked");
+    $(".startTitles").hide();
+    $("#game").show();
+    setInterval("doge.increaseTimer()", 1000)
+    doge.dogerun();
+}
+
+$("#startGame").on("click", startGame)
+$(".save").on("click", doge.save)
+
 
 // const newLevel = function () {
 
-//     doge.hodl = 0;
+//     doge.hodl = 10;
 //     //create hold button, update image
 // }
 
@@ -43,25 +73,4 @@ const doge = {
 //     //create diamond button, update image
 // }
 //in all of the above add event listeners connected to the numbers
-let timer = 0;
-const increaseTimer = function () {
-    timer++;
-    console.log(timer);
-}
-$("#game").hide();
-const startGame = function () {
-    console.log("clicked");
-    $(".startTitles").hide();
-    $("#game").show();
-    setInterval("increaseTimer()", 1000)
-    if (timer === 30 && doge === alive) {
-        doge.level += 1;
 
-    }
-    doge.dogerun();
-
-
-
-}
-$("#startGame").on("click", startGame)
-$(".save").on("click", doge.save)

@@ -2,6 +2,19 @@
 const doge = {
     level: 1,
     dollarvalue: 10,
+    alive: true,
+    crashTimer: 30,
+    crash: function () {
+        doge.crashTimer--
+        console.log("crash timer" + doge.crashTimer);
+    },
+    dogerun: function () {
+        setInterval(doge.crash, 2000);
+    },
+    save: function (event) {
+        doge.crashTimer++
+        console.log(doge.crashTimer);
+    }
 
     //update timer
     //update level
@@ -41,8 +54,14 @@ const startGame = function () {
     $(".startTitles").hide();
     $("#game").show();
     setInterval("increaseTimer()", 1000)
-    if (timer === 30) { }
+    if (timer === 30 && doge === alive) {
+        doge.level += 1;
+
+    }
+    doge.dogerun();
+
 
 
 }
 $("#startGame").on("click", startGame)
+$(".save").on("click", doge.save)

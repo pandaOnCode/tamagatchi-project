@@ -140,6 +140,8 @@ const startGame = function () {
     $("#game").show();
     doge.stop2 = setInterval("doge.increaseTimer()", 1000)
     doge.dogerun();
+    let name = prompt("Name your doge");
+    $(".name").text(name);
 }
 
 $("#startGame").on("click", startGame);

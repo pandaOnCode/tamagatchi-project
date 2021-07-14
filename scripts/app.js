@@ -3,6 +3,8 @@ const doge = {
     level: 1,
     dollarvalue: 15,
     alive: true,
+    stop: null,
+    stop2: null,
 
     newLevel: function () {
         console.log("new level");
@@ -23,12 +25,18 @@ const doge = {
             $("#game").hide()
             console.log("Dollar value reached 0, game over");
             doge.alive = false;
+
+            clearInterval(doge.stop);
+            clearInterval(doge.stop2);
+
             return $('#gameover').show();
+
         }
 
     },
     dogerun: function () {
-        setInterval(doge.crash, 1500);
+        doge.stop = setInterval(doge.crash, 500);
+
 
     },
     dollarValue: function (event) {
@@ -41,7 +49,7 @@ const doge = {
         if (doge.alive === true && doge.timer === 10) {
             doge.newLevel();
         }
-        if (doge.alive === true && doge.timer === 15) {
+        if (doge.alive === true && doge.timer === 25) {
             doge.newLevel3();
         }
     }
@@ -56,7 +64,7 @@ const startGame = function () {
     console.log("clicked");
     $(".startTitles").hide();
     $("#game").show();
-    setInterval("doge.increaseTimer()", 1000)
+    doge.stop2 = setInterval("doge.increaseTimer()", 1000)
     doge.dogerun();
 }
 

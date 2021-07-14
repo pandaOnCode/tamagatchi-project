@@ -1,28 +1,37 @@
 const doge = {
     timer: 0,
     level: 1,
-    dollarvalue: 10,
+    dollarvalue: 15,
     alive: true,
 
     newLevel: function () {
         console.log("new level");
+        doge.hodlvalue = 15;
+        doge.dollarvalue = 15;
+        $('#game').append('<button class=".hodlSave">Hodl</button>');
+        $("#dogepic").attr("src", "styles/images/level2Dog.png");
+    },
+    newLevel3: function () {
+        console.log("level 3 reached");
     },
     crash: function () {
-        doge.dollarvalue--
+        doge.dollarvalue--;
+        doge.hodlvalue--;
+
         console.log("Dollar Value " + doge.dollarvalue);
-        if (doge.dollarvalue === 0) {
+        if (doge.dollarvalue === 0 || doge.hodlvalue === 0) {
             $("#game").hide()
-            console.log("Dollar value reach 0, game over");
+            console.log("Dollar value reached 0, game over");
             doge.alive = false;
             return $('#gameover').show();
         }
 
     },
     dogerun: function () {
-        setInterval(doge.crash, 250);
+        setInterval(doge.crash, 1500);
 
     },
-    save: function (event) {
+    dollarValue: function (event) {
         doge.dollarvalue++
         console.log("Dollar Value " + doge.dollarvalue);
     },
@@ -30,7 +39,10 @@ const doge = {
         doge.timer++;
         console.log(doge.timer);
         if (doge.alive === true && doge.timer === 10) {
-            doge.newLevel;
+            doge.newLevel();
+        }
+        if (doge.alive === true && doge.timer === 15) {
+            doge.newLevel3();
         }
     }
 
@@ -49,7 +61,7 @@ const startGame = function () {
 }
 
 $("#startGame").on("click", startGame)
-$(".save").on("click", doge.save)
+$(".save").on("click", doge.dollarValue)
 
 
 // const newLevel = function () {

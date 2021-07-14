@@ -15,3 +15,13 @@ body{
     0%   {opacity: 0%;}
     100% {opacity: 100%;}
   }
+  #dollarProgress {
+    width: 100%;
+    background-color: grey;
+  }
+  
+  #dollarBar {
+    width: 1%;
+    height: 30px;
+    background-color: #ffde59;
+  }

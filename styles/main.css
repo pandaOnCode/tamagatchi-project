@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+*{
+  box-sizing: border-box;
+}
 body{
     background-color: #8c52ff;
     color: #ffde59;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Fredoka One', cursive, sans-serif;
+  
 }
+
 #startGame:hover{
     color: rgb(255, 255, 255);
 }
@@ -13,11 +19,8 @@ body{
     animation-duration: 7s;
 }
 #game{
-  display: flex;
-  flex-direction: row;
-  padding: 80px;
-  margin: 80px;
-  border-radius: 15px;
+  display:flex;
+  flex-direction:row;
 }
 
 @keyframes intro {
@@ -36,14 +39,27 @@ body{
   }
  
   #stats{
-    display: flex;
+    padding:1em;
+    border-radius:5px;
+    width: 50%;
+    padding:1em;
+    min-height: 100vh;
+    align-items: left
+    ;
+    display:flex; 
     flex-direction: column;
-    text-align: left;
+   
   }
   .doge{
-    flex: 3;
-    margin-right: 60px;
-    text-align: right;
+    padding:1em;
+    border-radius:5px;
+    width: 50%;
+    padding:1em;
+    min-height: 100vh;
+    align-items: center;
+    display:flex; 
+    flex-direction: column;
+    background-color: #3b3737;
   }
 
  
@@ -59,7 +75,7 @@ body{
   }
   button:hover{
     background-color: #ffde59;
-    border:solid hsl(0, 0%, 95%);
+    border:solid #8c52ff;
     color:#8c52ff;
   }
   button:active{

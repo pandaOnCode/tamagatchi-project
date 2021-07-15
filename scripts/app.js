@@ -141,7 +141,7 @@ const startGame = function () {
     $("#game").show();
     doge.stop2 = setInterval("doge.increaseTimer()", 1000)
     doge.dogerun();
-    let name = prompt("Name your doge");
+    let name = $("#fname").val();
     $(".name").text(name);
 }
 

@@ -93,7 +93,7 @@ const doge = {
         doge.dollarValue = 18;
         doge.redditValue = 18;
         $('.buttonrow').append('<button class="redditSave">Reddit</button>');
-        $("#dogepic").attr("src", "styles/images/level3Dog.png");
+        $("#dogepic").attr("src", "styles/images/level3Dog.png").addClass("animate__animated animate__zoomInDown");
         $(".redditSave").on("click", doge.redditValueIncrease);
         $("#stats ul").append('<li class="reddit"></li>');
         $("#stats ul").append('<div class="pb3"></div>');
@@ -108,7 +108,7 @@ const doge = {
         doge.redditValue = 18;
         doge.tweetValue = 18;
         $('.buttonrow').append('<button class="tweetSave">Musk Tweet</button>');
-        $("#dogepic").attr("src", "styles/images/level4Dog.png");
+        $("#dogepic").attr("src", "styles/images/level4Dog.png").addClass("animate__animated animate__rollIn");
         $(".tweetSave").on("click", doge.tweetValueIncrease);
         $("#stats ul").append('<li class="tweet"></li>');
         $("#stats ul").append('<div class="pb4"></div>');
@@ -125,7 +125,7 @@ const doge = {
         doge.tweetValue = 18;
         doge.diamondValue = 18;
         $('.buttonrow').append('<button class="diamondSave">Diamond Hands</button>');
-        $("#dogepic").attr("src", "styles/images/level5Dog.png");
+        $("#dogepic").attr("src", "styles/images/level5Dog.png").addClass("animate__animated animate__zoomOutUp animate__infinite");
         $(".diamondSave").on("click", doge.diamondValueIncrease);
         $("#stats ul").append('<li class="diamond"></li>');
         $("#stats ul").append('<div class="pb5"></div>');

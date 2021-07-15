@@ -35,16 +35,7 @@ body{
     0%   {opacity: 0%;}
     100% {opacity: 100%;}
   }
-  #dollarProgress {
-    width: 100%;
-    background-color: grey;
-  }
-  
-  #dollarBar {
-    width: 1%;
-    height: 30px;
-    background-color: #ffde59;
-  }
+
  
   #stats{
     padding:1em;
@@ -67,8 +58,28 @@ body{
     align-items: center;
     display:flex; 
     flex-direction: column;
-    background-color: #3b3737;
+    
+    background: linear-gradient(-45deg, #8c52ff, #a074f9, #4d357d, #3a00ad);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    border: solid 5px yellow;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+    
+      
   }
+
+  
 
 
   button{
@@ -79,6 +90,7 @@ body{
     border: none;
     text-decoration: none;
     transition: .2s;
+    font-family: 'Fredoka One', cursive, sans-serif;
   }
   button:hover{
     background-color: #ffde59;
@@ -139,6 +151,9 @@ body{
     background:#fff700;
     transition:width 0.1s;
     width:50%;
+  }
+  ul{
+    list-style-type: none;
   }
   /* .buttonrow{
     display: flex;

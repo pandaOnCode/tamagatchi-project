@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DodgeHodlr</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- Main CSS -->
     <link rel="stylesheet" href="./styles/main.css" />
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <!-- Main JS -->
     <script src="./scripts/app.js" defer></script>
+
 </head>
 
 <body>
@@ -23,21 +25,25 @@
     </div>
 
     <div id="game">
+
+        <!-- stats -->
         <div id="stats">
             <ul>
                 <li class="dollar"></li>
             </ul>
         </div>
-        <div class="doge">
-            <img id="dogepic" src="styles/images/level1Dog.png" alt="">
-            <h1 class="name">Your Doge</h1>
 
-            <button class="save">Dollar Value</button>
-            <!-- <div id="dollarProgress">
-                <div id="dollarBar"></div> -->
+        <!-- Buttons+Dog Picture -->
+        <div class="doge">
+            <img id="dogepic" class="animate__animated animate__tada" src="styles/images/level1Dog.png" alt="">
+            <h1 class="name">Your Doge</h1>
+            <div class="buttonrow">
+                <button class="save">Dollar Value</button>
+            </div>
         </div>
+
     </div>
-    </div>
+
     <div id="gameover">
         <h1>Game Over</h1>
     </div>

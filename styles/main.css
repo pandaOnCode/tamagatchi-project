@@ -1,6 +1,7 @@
 body{
     background-color: #8c52ff;
     color: #ffde59;
+    font-family: 'Lexend Deca', sans-serif;
 }
 #startGame:hover{
     color: rgb(255, 255, 255);
@@ -11,6 +12,14 @@ body{
     animation-name: intro;
     animation-duration: 7s;
 }
+#game{
+  display: flex;
+  flex-direction: row;
+  padding: 80px;
+  margin: 80px;
+  border-radius: 15px;
+}
+
 @keyframes intro {
     0%   {opacity: 0%;}
     100% {opacity: 100%;}
@@ -25,3 +34,41 @@ body{
     height: 30px;
     background-color: #ffde59;
   }
+ 
+  #stats{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  .doge{
+    flex: 3;
+    margin-right: 60px;
+    text-align: right;
+  }
+
+ 
+
+  button{
+    display: inline-block;
+    padding: 7px 20px;
+    margin: 3px;
+    border-radius: 25px;
+    border: none;
+    text-decoration: none;
+    transition: .2s;
+  }
+  button:hover{
+    background-color: #ffde59;
+    border:solid hsl(0, 0%, 95%);
+    color:#8c52ff;
+  }
+  button:active{
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*Move down*/
+  }
+  
+  /* .buttonrow{
+    display: flex;
+    justify-content: space-evenly;
+  } */

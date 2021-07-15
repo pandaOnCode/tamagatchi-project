@@ -43,8 +43,8 @@ const doge = {
     },
     hodlValueIncrease: function (event) {
         doge.hodlValue++;
-        console.log("Hodle Value " + doge.hodlValue);
-        $(".hodl").text(`Hodl Value: ${doge.hodlValue}`);
+        console.log("Hodl Value " + doge.hodlValue);
+        $(".hodl").text(`Hodl Power: ${doge.hodlValue}`);
 
     },
     redditValueIncrease: function (event) {
@@ -64,30 +64,31 @@ const doge = {
     },
     newLevel: function () {
         console.log("level 2 reached");
-        doge.hodlValue = 25;
-        doge.dollarValue = 25;
-        $('#game').append('<button class="hodlSave">Hodl</button>');
-        $("#dogepic").attr("src", "styles/images/level2Dog.png");
+        doge.hodlValue = 18;
+        doge.dollarValue = 18;
+        $('.buttonrow').append('<button class="hodlSave">Hodl</button>');
+        $("#dogepic").attr("src", "styles/images/level2Dog.png").addClass("animate__animated animate__bounceInUp");
         $(".hodlSave").on("click", doge.hodlValueIncrease);
         $("#stats").append('<li class="hodl"></li>');
+
     },
     newLevel3: function () {
         console.log("level 3 reached");
-        doge.hodlValue = 20;
-        doge.dollarValue = 20;
-        doge.redditValue = 20;
-        $('#game').append('<button class="redditSave">Reddit</button>');
+        doge.hodlValue = 18;
+        doge.dollarValue = 18;
+        doge.redditValue = 18;
+        $('.buttonrow').append('<button class="redditSave">Reddit</button>');
         $("#dogepic").attr("src", "styles/images/level3Dog.png");
         $(".redditSave").on("click", doge.redditValueIncrease);
         $("#stats").append('<li class="reddit"></li>');
     },
     newLevel4: function () {
         console.log("level 4 reached");
-        doge.hodlValue = 17;
-        doge.dollarValue = 17;
-        doge.redditValue = 17;
-        doge.tweetValue = 17;
-        $('#game').append('<button class="tweetSave">Musk Tweet</button>');
+        doge.hodlValue = 18;
+        doge.dollarValue = 18;
+        doge.redditValue = 18;
+        doge.tweetValue = 18;
+        $('.buttonrow').append('<button class="tweetSave">Musk Tweet</button>');
         $("#dogepic").attr("src", "styles/images/level4Dog.png");
         $(".tweetSave").on("click", doge.tweetValueIncrease);
         $("#stats").append('<li class="tweet"></li>');
@@ -95,12 +96,12 @@ const doge = {
 
     newLevel5: function () {
         console.log("level 4 reached");
-        doge.hodlValue = 15;
-        doge.dollarValue = 15;
-        doge.redditValue = 15;
-        doge.tweetValue = 15;
-        doge.diamondValue = 15;
-        $('#game').append('<button class="diamondSave">Diamond Hands</button>');
+        doge.hodlValue = 18;
+        doge.dollarValue = 18;
+        doge.redditValue = 18;
+        doge.tweetValue = 18;
+        doge.diamondValue = 18;
+        $('.buttonrow').append('<button class="diamondSave">Diamond Hands</button>');
         $("#dogepic").attr("src", "styles/images/level5Dog.png");
         $(".diamondSave").on("click", doge.diamondValueIncrease);
         $("#stats").append('<li class="diamond"></li>');

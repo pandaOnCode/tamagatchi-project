@@ -1,16 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 *{
   box-sizing: border-box;
+  
 }
 body{
     background-color: #8c52ff;
     color: #ffde59;
     font-family: 'Fredoka One', cursive, sans-serif;
-  
+    min-height: 100vh;
+    padding: 5px;
+    margin: 10;
+    padding: 10;
 }
+
+
 
 #startGame:hover{
     color: rgb(255, 255, 255);
+   
 }
 .startTitles{
     justify-content: center;
@@ -18,6 +25,7 @@ body{
     animation-name: intro;
     animation-duration: 7s;
 }
+    
 #game{
   display:flex;
   flex-direction:row;
@@ -62,7 +70,6 @@ body{
     background-color: #3b3737;
   }
 
- 
 
   button{
     display: inline-block;
@@ -84,6 +91,55 @@ body{
     transform: translateY(4px);/*Move down*/
   }
   
+  .overStyle{
+    color: rgb(255, 136, 0);
+  }
+  h1{
+    font-size: 30px;
+  }
+  h3{
+    font: 25px;
+  }
+  li{
+    font-size: 20px;
+  }
+
+  .pb1, .pb2, .pb3, .pb4, .pb5{
+    width:150px;
+    height: 20px;
+    
+  }
+ 
+  .pf1{
+    height:100%;
+    background:#59ea63;
+    transition:width 0.2s;
+    width:50%;
+  }
+  .pf2{
+    height:100%;
+    background:#53ebff;
+    transition:width 0.2s;
+    width:50%;
+  }
+  .pf3{
+    height:100%;
+    background:#ff5370;
+    transition:width 0.2s;
+    width:50%;
+  }
+  .pf4{
+    height:100%;
+    background:#f8f8f8;
+    transition:width 0.2s;
+    width:50%;
+  }
+  .pf5{
+    height:100%;
+    background:#fff700;
+    transition:width 0.1s;
+    width:50%;
+  }
   /* .buttonrow{
     display: flex;
     justify-content: space-evenly;

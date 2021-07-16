@@ -152,6 +152,7 @@ const doge = {
             $("body").append("<h1>DOGE HAS LANDED</h1>")
             $("body").css("background-image", "url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fdogemuchwow.com%2Fwp-content%2Fuploads%2F2019%2F06%2Fdoge-wallpaper-5-moon.jpg&f=1&nofb=1)");
             $("body").append("")
+            $("body").append('<audio src="sounds/Free Synthwave Loop.wav" autoplay loop></audio>');
             clearInterval(doge.stop);
             clearInterval(doge.stop2);
         }

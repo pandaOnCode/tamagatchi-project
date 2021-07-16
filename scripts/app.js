@@ -1,6 +1,5 @@
 const doge = {
     timer: 0,
-    level: 1,
     dollarValue: 10,
     alive: true,
     stop: null,
@@ -74,6 +73,7 @@ const doge = {
     },
     newLevel: function () {
         console.log("level 2 reached");
+        $(".levelDisplay").text("Level 2")
         doge.hodlValue = 18;
         doge.dollarValue = 18;
         $('.buttonrow').append('<button class="hodlSave">Hodl</button>');
@@ -89,6 +89,7 @@ const doge = {
     },
     newLevel3: function () {
         console.log("level 3 reached");
+        $(".levelDisplay").text("Level 3")
         doge.hodlValue = 18;
         doge.dollarValue = 18;
         doge.redditValue = 18;
@@ -103,6 +104,7 @@ const doge = {
     },
     newLevel4: function () {
         console.log("level 4 reached");
+        $(".levelDisplay").text("Level 4")
         doge.hodlValue = 18;
         doge.dollarValue = 18;
         doge.redditValue = 18;
@@ -119,6 +121,7 @@ const doge = {
 
     newLevel5: function () {
         console.log("level 4 reached");
+        $(".levelDisplay").text("Final Stage")
         doge.hodlValue = 18;
         doge.dollarValue = 18;
         doge.redditValue = 18;

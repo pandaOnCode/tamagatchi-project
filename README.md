@@ -21,3 +21,5 @@ The functions that play in increments of 10 seconds are responsible for assignin
 
 Level 2 appends hodl value, level 3 appends reddit value, level 4 appends tweet value, level 5 appends diamond value. Each function changes the picture and also adds an event listener button that increases property values by 1.
 
+>Link to app mockup-
+https://www.canva.com/design/DAEkB99bgBc/duscR_Q0aLbFP7vuadLvmQ/view?utm_content=DAEkB99bgBc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
